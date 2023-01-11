@@ -1,0 +1,12 @@
+.test {
+  height: fit-content;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button {
+    width: 93px;
+    border-radius: 12px;
+    height: 35px;
+  }
+}

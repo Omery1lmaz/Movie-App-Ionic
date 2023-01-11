@@ -1,0 +1,72 @@
+.card {
+  width: 95%;
+  margin: auto;
+  height: auto;
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  -moz-box-shadow: -1px 1px 4px -2px #fff;
+  -webkit-box-shadow: -1px 1px 4px -2px #fff;
+  box-shadow: -1px 1px 4px -2px #fff;
+
+  justify-content: space-around;
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+
+  .card-head {
+    width: 54%;
+    height: fit-content;
+    height: 118px;
+  }
+  .card-body {
+    width: inherit;
+    display: flex;
+    margin-left: 15px;
+    flex-direction: column;
+    align-content: flex-end;
+    align-items: flex-start;
+    justify-content: center;
+    .description {
+      display: inline-block;
+      color: darkgray;
+    }
+    div {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+    }
+    #outline {
+      color: yellow;
+      border-color: yellow;
+    }
+    .title {
+      font-size: 20px;
+      margin: 0;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+    }
+    .favori-icon {
+      padding: 7px;
+
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: flex-end;
+      button {
+        margin-right: 5px;
+
+        background: transparent;
+        i {
+          margin-right: 15px;
+          margin-top: 5px;
+          font-size: 19px;
+        }
+      }
+    }
+  }
+}

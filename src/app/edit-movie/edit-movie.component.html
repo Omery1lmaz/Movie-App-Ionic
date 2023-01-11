@@ -1,0 +1,51 @@
+<ion-list>
+  <form [formGroup]="test" (ngSubmit)="submitForm()" *ngIf="test">
+    <ion-item fill="solid">
+      <ion-label position="floating">Name</ion-label>
+      <ion-input type="text" formControlName="title"></ion-input>
+      <ion-note slot="helper">Enter a valid email</ion-note>
+      <ion-note slot="error">Invalid email</ion-note>
+    </ion-item>
+    <ion-item fill="solid">
+      <ion-label position="floating">Mınutes</ion-label>
+      <ion-input type="number" formControlName="duration"></ion-input>
+      <ion-note slot="helper">Enter a valid email</ion-note>
+      <ion-note slot="error">Invalid email</ion-note>
+    </ion-item>
+    <ion-item fill="solid">
+      <ion-label position="floating">imfb</ion-label>
+      <ion-input type="number" formControlName="imdb"></ion-input>
+      <ion-note slot="helper">Enter a valid imdb</ion-note>
+      <ion-note slot="error">Invalid imdb</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-select
+        placeholder="Select food"
+        [value]="test.value.categories"
+        [multiple]="true"
+        formControlName="categories"
+      >
+        <ion-select-option
+          *ngFor="let food of categories"
+          [value]="food.title"
+          >{{ food.title }}</ion-select-option
+        >
+      </ion-select>
+    </ion-item>
+
+    <ion-item fill="solid">
+      <ion-label position="floating">Release Date </ion-label>
+      <ion-input
+        type="date"
+        placeholder="Release Date"
+        formControlName="release_date"
+        [value]="test.value.release_date | date : 'shortDate'"
+      ></ion-input>
+      <ion-note slot="helper">Enter a valid email</ion-note>
+      <ion-note slot="error">Invalid email</ion-note>
+    </ion-item>
+    <div class="test">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</ion-list>
